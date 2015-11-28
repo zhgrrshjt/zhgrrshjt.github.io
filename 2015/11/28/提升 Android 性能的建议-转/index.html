@@ -6,21 +6,18 @@
   <title>Garryz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#提升 Android 性能的建议
-[TOC]
-##Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和">
+##Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Garryz">
 <meta property="og:url" content="http://www.garryz.cn/2015/11/28/提升 Android 性能的建议-转/index.html">
 <meta property="og:site_name" content="Garryz">
 <meta property="og:description" content="#提升 Android 性能的建议
-[TOC]
-##Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和">
-<meta property="og:updated_time" content="2015-11-28T10:07:55.000Z">
+##Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragm">
+<meta property="og:updated_time" content="2015-11-28T10:18:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Garryz">
 <meta name="twitter:description" content="#提升 Android 性能的建议
-[TOC]
-##Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和">
+##Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragm">
   
     <link rel="alternative" href="/atom.xml" title="Garryz" type="application/atom+xml">
   
@@ -205,7 +202,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/28/提升 Android 性能的建议-转/" class="article-date">
-  	<time datetime="2015-11-28T10:08:10.000Z" itemprop="datePublished">2015-11-28</time>
+  	<time datetime="2015-11-28T10:18:57.000Z" itemprop="datePublished">2015-11-28</time>
 </a>
     </div>
   
@@ -217,7 +214,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#提升 Android 性能的建议</p>
-<p>[TOC]</p>
 <p>##Activity 泄漏<br>我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragment 都有自己的生命周期。一旦我们持有了静态引用，Activity 和 Fragment 就不会被垃圾回收器清理掉了。这就是为什么静态引用很危险。</p>
 <pre><code>m_staticActivity = staticFragment.<span class="function"><span class="title">getActivity</span><span class="params">()</span></span>
 </code></pre><p>另外，泄漏 Listener 也是经常会发生的事情。比如说，我有下面的代码。LeakActivity继承自 Activity，我们有一个单例：NastyManager，当我们通过 addListener(this) 将 Activity 作为 Listener 和 NastyManager 绑定起来的时候，不好的事情就发生了。</p>
