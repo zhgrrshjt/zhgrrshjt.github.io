@@ -192,7 +192,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/29/markdown文件头/" class="article-date">
-  	<time datetime="2015-11-29T10:59:51.000Z" itemprop="datePublished">2015-11-29</time>
+  	<time datetime="2015-11-29T11:12:01.000Z" itemprop="datePublished">2015-11-29</time>
 </a>
     </div>
   
@@ -215,18 +215,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<pre><code>title: markdown文件标题
-date: 2015年11月29日 17:18
-tags: 
--<span class="ruby"> 标签一
-</span>-<span class="ruby"> 标签二
-</span>categories: 
--<span class="ruby"> 分类一
-</span>-<span class="ruby"> 分类二
-</span>
--<span class="ruby">--</span>
+<pre><code><span class="attribute">title</span>: <span class="string">markdown文件标题</span>
+<span class="attribute">date</span>: <span class="string">2015年11月29日 17:18</span>
+<span class="attribute">tags</span>: <span class="string">标签 #单个标签</span>
+<span class="attribute">tags</span>: <span class="string">[标签一,标签二] #多标签配置</span>
+<span class="attribute">categories</span>: <span class="string">分类 #一级分类</span>
+<span class="attribute">categories</span>: <span class="string">[分类一级,分类二级] #多级分类,路径为/分类一级/分类二级</span>
+
+<span class="applescript"><span class="comment">---</span></span>
 </code></pre></blockquote>
-<p>分割线之前要加一行空行,标签与分类可以有多个,其他属性不断完善中</p>
+<p>属性要在分割线之前加入</p>
 
       
     </div>
@@ -299,7 +297,7 @@ tags:
 </ol>
 <blockquote>
 <p><em>hexo generate 与 hexo deploy 两步可以缩写为 : hexo d -g</em></p>
-<p><strong>当git使用https协议无法链接式,可以使用ssh尝试</strong></p>
+<p><strong>当git使用https协议无法链接时,可以使用ssh尝试</strong></p>
 </blockquote>
 
       
