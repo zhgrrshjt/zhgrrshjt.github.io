@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="activity泄露,图片,并发,网络,静态内部类," />
+  <meta name="keywords" content="Hexo, NexT, Garryz, garryz" />
 
 
 
@@ -59,16 +59,15 @@
 
 
 
-<meta name="description" content="Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragment 都有自己的生命周期。一旦我们持有">
-<meta property="og:type" content="article">
-<meta property="og:title" content="提升android 性能的建议">
-<meta property="og:url" content="http://www.garryz.cn/2015/11/28/提升android 性能的建议/index.html">
+<meta name="description" content="学习总结 思考感悟 知识管理">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Garryz">
+<meta property="og:url" content="http://www.garryz.cn/page/2/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragment 都有自己的生命周期。一旦我们持有">
-<meta property="og:updated_time" content="2015-12-09T16:18:58.000Z">
+<meta property="og:description" content="学习总结 思考感悟 知识管理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="提升android 性能的建议">
-<meta name="twitter:description" content="Activity 泄漏我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragment 都有自己的生命周期。一旦我们持有">
+<meta name="twitter:title" content="Garryz">
+<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
 
 
 
@@ -86,7 +85,7 @@
   };
 </script>
 
-  <title> 提升android 性能的建议 | Garryz </title>
+  <title> Garryz </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -103,7 +102,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -192,9 +193,15 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
 
-  <div id="posts" class="posts-expand">
     
+
+    
+    
+
+    
+      
 
   
   
@@ -214,7 +221,10 @@
             
             
               
-                提升android 性能的建议
+                
+                <a class="post-title-link" href="/2015/11/28/提升android 性能的建议/" itemprop="url">
+                  提升android 性能的建议
+                </a>
               
             
           </h1>
@@ -287,7 +297,9 @@
       
 
       
-        <h2 id="Activity_泄漏">Activity 泄漏</h2><p>我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragment 都有自己的生命周期。一旦我们持有了静态引用，Activity 和 Fragment 就不会被垃圾回收器清理掉了。这就是为什么静态引用很危险。</p>
+        
+          
+            <h2 id="Activity_泄漏">Activity 泄漏</h2><p>我们第一个需要修复的问题就是 Activity 泄漏，我们先来看看内存泄漏是怎么发生的。 Activity 泄漏通常是内存泄漏的一种。为什么会泄漏呢？如果你持有一个未使用的 Activity 的引用，其实也就持有了 Activity 的布局，自然也就包含了所有的 View。最棘手的是持有静态引用。别忘了，Activity 和 Fragment 都有自己的生命周期。一旦我们持有了静态引用，Activity 和 Fragment 就不会被垃圾回收器清理掉了。这就是为什么静态引用很危险。</p>
 <pre><code>m_staticActivity = staticFragment.<span class="function"><span class="title">getActivity</span><span class="params">()</span></span>
 </code></pre><p>另外，泄漏 Listener 也是经常会发生的事情。比如说，我有下面的代码。LeakActivity继承自 Activity，我们有一个单例：NastyManager，当我们通过 addListener(this) 将 Activity 作为 Listener 和 NastyManager 绑定起来的时候，不好的事情就发生了。</p>
 <pre><code>public <span class="class"><span class="keyword">class</span> <span class="title">LeakActivity</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">Activity</span> {</span>
@@ -404,53 +416,33 @@
 <li>了解维护情况和成本</li>
 </ul>
 
+          
+        
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/activity泄露/" rel="tag">#activity泄露</a>
-          
-            <a href="/tags/图片/" rel="tag">#图片</a>
-          
-            <a href="/tags/并发/" rel="tag">#并发</a>
-          
-            <a href="/tags/网络/" rel="tag">#网络</a>
-          
-            <a href="/tags/静态内部类/" rel="tag">#静态内部类</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/29/hexo网站源码git管理/" rel="prev" title="hexo网站源码git管理">
-                hexo网站源码git管理 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -458,14 +450,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2015/11/28/提升android 性能的建议/"
-           data-title="提升android 性能的建议" data-url="http://www.garryz.cn/2015/11/28/提升android 性能的建议/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -485,17 +469,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-garryz.qbox.me/garryz_loco.png"
@@ -584,23 +559,6 @@
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity_泄漏"><span class="nav-number">1.</span> <span class="nav-text">Activity 泄漏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何避免_Activity_泄漏?"><span class="nav-number">1.1.</span> <span class="nav-text">如何避免 Activity 泄漏?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#滑动"><span class="nav-number">2.</span> <span class="nav-text">滑动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-number">2.1.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存"><span class="nav-number">2.2.</span> <span class="nav-text">内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">2.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大JSON"><span class="nav-number">2.4.</span> <span class="nav-text">大JSON</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何优化滑动速度?"><span class="nav-number">2.5.</span> <span class="nav-text">如何优化滑动速度?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发APIs"><span class="nav-number">3.</span> <span class="nav-text">并发APIs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IntentService"><span class="nav-number">3.1.</span> <span class="nav-text">IntentService</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AsyncTask"><span class="nav-number">3.2.</span> <span class="nav-text">AsyncTask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor_Framework"><span class="nav-number">3.3.</span> <span class="nav-text">Executor Framework</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何适应并发APIs?"><span class="nav-number">3.4.</span> <span class="nav-text">如何适应并发APIs?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deprecation"><span class="nav-number">4.</span> <span class="nav-text">Deprecation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#架构"><span class="nav-number">5.</span> <span class="nav-text">架构</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
-        </section>
-      
 
     </div>
   </aside>
@@ -681,167 +639,6 @@
 
 
   
-  
-<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    NexT.motion.middleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-
-      if (CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          NexT.utils.displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
-
 
   
 

@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ant," />
+  <meta name="keywords" content="ant,homebrew," />
 
 
 
@@ -59,31 +59,22 @@
 
 
 
-<meta name="description" content="手动安装(需要配置环境变量)
-Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
-解压到 :   /username/software/apache-ant-1.9.6 下
-修改环境变量 :  ~/.bash_profile : 文件末尾增加
-
-1export PATH=$&amp;#123;PATH&amp;#125;:/Users/username/software/apache-ant-1.9.6">
+<meta name="description" content="手动安装Ant官网地址 下载最新版本zip包(以1.9.6版本为例)解压到 :   /username/software/apache-ant-1.9.6 下修改环境变量 :  ~/.bash_profile : 文件末尾增加
+1export PATH=$&amp;#123;PATH&amp;#125;:/Users/username/software/apache-ant-1.9.6/bin
+重新打开iTerm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac安装Ant">
 <meta property="og:url" content="http://www.garryz.cn/2015/12/09/Mac安装Ant/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="手动安装(需要配置环境变量)
-Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
-解压到 :   /username/software/apache-ant-1.9.6 下
-修改环境变量 :  ~/.bash_profile : 文件末尾增加
-
-1export PATH=$&amp;#123;PATH&amp;#125;:/Users/username/software/apache-ant-1.9.6">
-<meta property="og:updated_time" content="2015-12-09T16:26:06.000Z">
+<meta property="og:description" content="手动安装Ant官网地址 下载最新版本zip包(以1.9.6版本为例)解压到 :   /username/software/apache-ant-1.9.6 下修改环境变量 :  ~/.bash_profile : 文件末尾增加
+1export PATH=$&amp;#123;PATH&amp;#125;:/Users/username/software/apache-ant-1.9.6/bin
+重新打开iTerm">
+<meta property="og:updated_time" content="2015-12-10T11:38:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac安装Ant">
-<meta name="twitter:description" content="手动安装(需要配置环境变量)
-Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
-解压到 :   /username/software/apache-ant-1.9.6 下
-修改环境变量 :  ~/.bash_profile : 文件末尾增加
-
-1export PATH=$&amp;#123;PATH&amp;#125;:/Users/username/software/apache-ant-1.9.6">
+<meta name="twitter:description" content="手动安装Ant官网地址 下载最新版本zip包(以1.9.6版本为例)解压到 :   /username/software/apache-ant-1.9.6 下修改环境变量 :  ~/.bash_profile : 文件末尾增加
+1export PATH=$&amp;#123;PATH&amp;#125;:/Users/username/software/apache-ant-1.9.6/bin
+重新打开iTerm">
 
 
 
@@ -255,8 +246,8 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/software/" itemprop="url" rel="index">
-                    <span itemprop="name">software</span>
+                  <a href="/categories/mac/" itemprop="url" rel="index">
+                    <span itemprop="name">mac</span>
                   </a>
                 </span>
 
@@ -302,22 +293,16 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
       
 
       
-        <h2 id="手动安装(需要配置环境变量)">手动安装(需要配置环境变量)</h2><ul>
-<li><a href="http://ant.apache.org/bindownload.cgi" target="_blank" rel="external">Ant官网地址</a> 下载最新版本zip包(以1.9.6版本为例)</li>
-<li>解压到 :   /username/software/apache-ant-1.9.6 下</li>
-<li>修改环境变量 :  ~/.bash_profile : 文件末尾增加</li>
-</ul>
+        <h2 id="手动安装">手动安装</h2><p><a href="http://ant.apache.org/bindownload.cgi" target="_blank" rel="external">Ant官网地址</a> 下载最新版本zip包(以1.9.6版本为例)<br>解压到 :   /username/software/apache-ant-1.9.6 下<br>修改环境变量 :  ~/.bash_profile : 文件末尾增加</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export <span class="constant">PATH=</span><span class="variable">$&#123;</span><span class="constant">PATH&#125;</span><span class="symbol">:/Users/username/software/apache-ant-</span><span class="number">1.9</span>.<span class="number">6</span>/bin</span><br></pre></td></tr></table></figure>
-<ul>
-<li>重新打开iTerm,输入 :</li>
-</ul>
+<p>重新打开iTerm,输入 :</p>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ant</span> -version</span><br></pre></td></tr></table></figure>
 <p>配置成功则显示如下 ：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Apache Ant(TM) <span class="property">version</span> <span class="number">1.9</span><span class="number">.6</span> compiled <span class="function_start"><span class="keyword">on</span></span> June <span class="number">29</span> <span class="number">2015</span></span><br></pre></td></tr></table></figure>
-<h2 id="通过HomeBrew安装(无需配置环境变量)">通过HomeBrew安装(无需配置环境变量)</h2><ul>
-<li>安装HomeBrew : ruby -e “$(curl -fsSL <a href="https://raw.github.com/Homebrew/homebrew/go/install" target="_blank" rel="external">https://raw.github.com/Homebrew/homebrew/go/install</a>)” </li>
-<li>通过brew install ant</li>
-</ul>
+<h2 id="Homebrew安装">Homebrew安装</h2><p>Homebrew官网 : <a href="http://brew.sh/index.html" target="_blank" rel="external">官网地址</a></p>
+<h3 id="终端安装:">终端安装:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Homebrew手动安装">Homebrew手动安装</h3><p>下载homebrew安装包 : <a href="https://github.com/Homebrew/homebrew" target="_blank" rel="external">下载地址</a><br>解压到指定目录,并添加</p>
+<h3 id="最后安装Ant:">最后安装Ant:</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>install ant</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -327,6 +312,8 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
         <div class="post-tags">
           
             <a href="/tags/ant/" rel="tag">#ant</a>
+          
+            <a href="/tags/homebrew/" rel="tag">#homebrew</a>
           
         </div>
       
@@ -417,7 +404,7 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -431,7 +418,7 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
 
           <div class="site-state-item site-state-tags">
             
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">标签</span>
               
           </div>
@@ -504,7 +491,7 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#手动安装(需要配置环境变量)"><span class="nav-number">1.</span> <span class="nav-text">手动安装(需要配置环境变量)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过HomeBrew安装(无需配置环境变量)"><span class="nav-number">2.</span> <span class="nav-text">通过HomeBrew安装(无需配置环境变量)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#手动安装"><span class="nav-number">1.</span> <span class="nav-text">手动安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homebrew安装"><span class="nav-number">2.</span> <span class="nav-text">Homebrew安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#终端安装:"><span class="nav-number">2.1.</span> <span class="nav-text">终端安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Homebrew手动安装"><span class="nav-number">2.2.</span> <span class="nav-text">Homebrew手动安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后安装Ant:"><span class="nav-number">2.3.</span> <span class="nav-text">最后安装Ant:</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -525,8 +512,8 @@ Ant官网地址 下载最新版本zip包(以1.9.6版本为例)
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>

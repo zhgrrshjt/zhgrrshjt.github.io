@@ -63,7 +63,8 @@
 下载 dex-method-counts :  下载地址
 解压到 /Users/username/software/dex-method-counts 下
 
-使用Ant: cd dex-method-counts/12$ ant jar$ ./dex-method-counts path/to/App.apk # or .zip or .dex or">
+使用Ant:12$ ant jar$ ./dex-method-counts path/to/App.apk # or .zip or .dex or directory
+使用Gradle:12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="查看APK方法数">
 <meta property="og:url" content="http://www.garryz.cn/2015/12/10/查看APK方法数/index.html">
@@ -72,15 +73,17 @@
 下载 dex-method-counts :  下载地址
 解压到 /Users/username/software/dex-method-counts 下
 
-使用Ant: cd dex-method-counts/12$ ant jar$ ./dex-method-counts path/to/App.apk # or .zip or .dex or">
-<meta property="og:updated_time" content="2015-12-09T16:23:53.000Z">
+使用Ant:12$ ant jar$ ./dex-method-counts path/to/App.apk # or .zip or .dex or directory
+使用Gradle:12">
+<meta property="og:updated_time" content="2015-12-10T11:35:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="查看APK方法数">
 <meta name="twitter:description" content="使用 dex-method-counts 查看
 下载 dex-method-counts :  下载地址
 解压到 /Users/username/software/dex-method-counts 下
 
-使用Ant: cd dex-method-counts/12$ ant jar$ ./dex-method-counts path/to/App.apk # or .zip or .dex or">
+使用Ant:12$ ant jar$ ./dex-method-counts path/to/App.apk # or .zip or .dex or directory
+使用Gradle:12">
 
 
 
@@ -303,9 +306,9 @@
 <li>下载 dex-method-counts :  <a href="https://github.com/mihaip/dex-method-counts" target="_blank" rel="external">下载地址</a></li>
 <li>解压到 /Users/username/software/dex-method-counts 下</li>
 </ul>
-<p>使用Ant: cd dex-method-counts/<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ant jar</span><br><span class="line">$ ./dex-<span class="keyword">method</span>-counts path/to/<span class="type">App</span>.apk <span class="comment"># or .zip or .dex or directory</span></span><br></pre></td></tr></table></figure></p>
-<p>使用Gradle: cd dex-method-counts/<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ./gradlew assemble</span><br><span class="line">$ ./dex-<span class="keyword">method</span>-counts path/to/<span class="type">App</span>.apk <span class="comment"># or .zip or .dex or directory</span></span><br></pre></td></tr></table></figure></p>
-<p>将看到的内容: cd dex-method-counts/</p>
+<p>使用Ant:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ant jar</span><br><span class="line">$ ./dex-<span class="keyword">method</span>-counts path/to/<span class="type">App</span>.apk <span class="comment"># or .zip or .dex or directory</span></span><br></pre></td></tr></table></figure></p>
+<p>使用Gradle:<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ./gradlew assemble</span><br><span class="line">$ ./dex-<span class="keyword">method</span>-counts path/to/<span class="type">App</span>.apk <span class="comment"># or .zip or .dex or directory</span></span><br></pre></td></tr></table></figure></p>
+<p>将看到的内容:</p>
 <figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Read</span> <span class="keyword">in</span> <span class="number">65490</span> <span class="function"><span class="keyword">method</span> <span class="title">IDs</span>.</span><br><span class="line">&lt;<span class="title">root</span>&gt;:</span> <span class="number">65490</span></span><br><span class="line">    : <span class="number">3</span></span><br><span class="line">    android: <span class="number">6837</span></span><br><span class="line">        accessibilityservice: <span class="number">6</span></span><br><span class="line">        bluetooth: <span class="number">2</span></span><br><span class="line">        content: <span class="number">248</span></span><br><span class="line">            pm: <span class="number">22</span></span><br><span class="line">            res: <span class="number">45</span></span><br><span class="line">        ...</span><br><span class="line">    com: <span class="number">53881</span></span><br><span class="line">        adjust: <span class="number">283</span></span><br><span class="line">            sdk: <span class="number">283</span></span><br><span class="line">        codebutler: <span class="number">65</span></span><br><span class="line">            android_websockets: <span class="number">65</span></span><br><span class="line">        ...</span><br><span class="line">    Overall <span class="function"><span class="keyword">method</span> <span class="title">count</span>:</span> <span class="number">65490</span></span><br></pre></td></tr></table></figure>
       
     </div>
@@ -407,7 +410,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -421,7 +424,7 @@
 
           <div class="site-state-item site-state-tags">
             
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">标签</span>
               
           </div>
@@ -515,8 +518,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
