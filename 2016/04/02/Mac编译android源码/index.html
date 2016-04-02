@@ -59,31 +59,31 @@
 
 
 
-<meta name="description" content="从官网开始
+<meta name="description" content="从[官网][1]开始
 代码下载
 安装repo创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)
-12$ mkdir /bin$ PATH=/bin:$PATH
+12$ mkdir ~/bin$ PATH=~/bin:$PATH
 下载repo工具并设置为可执行
-12$ curl https://storage.googleapis.c">
+12$ curl https://storage.googl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac编译android源码">
 <meta property="og:url" content="http://www.garryz.cn/2016/04/02/Mac编译android源码/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="从官网开始
+<meta property="og:description" content="从[官网][1]开始
 代码下载
 安装repo创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)
-12$ mkdir /bin$ PATH=/bin:$PATH
+12$ mkdir ~/bin$ PATH=~/bin:$PATH
 下载repo工具并设置为可执行
-12$ curl https://storage.googleapis.c">
-<meta property="og:updated_time" content="2016-04-02T09:56:25.000Z">
+12$ curl https://storage.googl">
+<meta property="og:updated_time" content="2016-04-02T10:43:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac编译android源码">
-<meta name="twitter:description" content="从官网开始
+<meta name="twitter:description" content="从[官网][1]开始
 代码下载
 安装repo创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)
-12$ mkdir /bin$ PATH=/bin:$PATH
+12$ mkdir ~/bin$ PATH=~/bin:$PATH
 下载repo工具并设置为可执行
-12$ curl https://storage.googleapis.c">
+12$ curl https://storage.googl">
 
 
 
@@ -305,12 +305,12 @@
       
 
       
-        <p> 从<a href="https://source.android.com/source/downloading.html" target="_blank" rel="external">官网</a>开始</p>
+        <p> 从[官网][1]开始</p>
 <p>代码下载</p>
 <h3 id="安装repo">安装repo</h3><p>创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /bin</span><br><span class="line">$ PATH=/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 <p>下载repo工具并设置为可执行</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>curl <span class="symbol">https:</span>/<span class="regexp">/storage.googleapis.com/git</span>-repo-downloads/repo \&gt; <span class="regexp">/bin/repo</span></span><br><span class="line"><span class="variable">$ </span>chmod a+x /bin/repo</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>curl <span class="symbol">https:</span>/<span class="regexp">/storage.googleapis.com/git</span>-repo-downloads/repo &gt; ~<span class="regexp">/bin/repo</span></span><br><span class="line"><span class="variable">$ </span>chmod a+x ~<span class="regexp">/bin/repo</span></span><br></pre></td></tr></table></figure>
 <h3 id="初始化repo">初始化repo</h3><p>创建一个工作空间</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir <span class="constant">WORKING_DIRECTORY</span></span><br><span class="line"><span class="variable">$ </span>cd <span class="constant">WORKING_DIRECTORY</span></span><br></pre></td></tr></table></figure>
 <p>配置git帐号信息</p>
@@ -322,7 +322,7 @@
 <p>下载代码</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">repo</span> sync</span><br></pre></td></tr></table></figure>
 <h3 id="代码编译">代码编译</h3><p>mac上编译android源码需要区分文件名称大小写,所以需要创建一个大小写敏感的分区</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo hdiutil <span class="operator"><span class="keyword">create</span> -<span class="keyword">type</span> <span class="keyword">SPARSE</span> -fs <span class="string">'Case-sensitive Journaled HFS+'</span> -<span class="keyword">size</span> <span class="number">60</span><span class="keyword">g</span> /android.dmg</span><br><span class="line">sudo hdiutil attach /android.dmg.sparseimage -mountpoint /Volumes/android</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo hdiutil <span class="operator"><span class="keyword">create</span> -<span class="keyword">type</span> <span class="keyword">SPARSE</span> -fs <span class="string">'Case-sensitive Journaled HFS+'</span> -<span class="keyword">size</span> <span class="number">60</span><span class="keyword">g</span> ~/android.dmg</span><br><span class="line">sudo hdiutil attach ~/android.dmg.sparseimage -mountpoint /Volumes/android</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>第一步为创建分区,第二步为修改该分区为可读写模式</p>
 </blockquote>
