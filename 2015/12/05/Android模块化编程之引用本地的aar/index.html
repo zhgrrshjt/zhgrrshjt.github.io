@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Garryz, garryz" />
+  <meta name="keywords" content="aar,gradle," />
 
 
 
@@ -59,15 +59,19 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Garryz">
-<meta property="og:url" content="http://www.garryz.cn/archives/2016/04/index.html">
+<meta name="description" content="随着项目越来越多，代码的复用就变得异常重要，这时候就要进行模块化编程，就是把一些通用的组件或者类库做成单独的模块，其他项目直接进行引用就好。针对Android开发最常见的就是Android Library，在Gradle出现之前引用Android Library的方式也很繁琐，但是有了Gradle一切变得非常简单方便。
+aar是什么大家都知道jar文件把，如果你有一个Android Library">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android模块化编程之引用本地的aar">
+<meta property="og:url" content="http://www.garryz.cn/2015/12/05/Android模块化编程之引用本地的aar/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="随着项目越来越多，代码的复用就变得异常重要，这时候就要进行模块化编程，就是把一些通用的组件或者类库做成单独的模块，其他项目直接进行引用就好。针对Android开发最常见的就是Android Library，在Gradle出现之前引用Android Library的方式也很繁琐，但是有了Gradle一切变得非常简单方便。
+aar是什么大家都知道jar文件把，如果你有一个Android Library">
+<meta property="og:updated_time" content="2016-04-03T15:22:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Garryz">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="Android模块化编程之引用本地的aar">
+<meta name="twitter:description" content="随着项目越来越多，代码的复用就变得异常重要，这时候就要进行模块化编程，就是把一些通用的组件或者类库做成单独的模块，其他项目直接进行引用就好。针对Android开发最常见的就是Android Library，在Gradle出现之前引用Android Library的方式也很繁琐，但是有了Gradle一切变得非常简单方便。
+aar是什么大家都知道jar文件把，如果你有一个Android Library">
 
 
 
@@ -85,7 +89,7 @@
   };
 </script>
 
-  <title> 归档 | Garryz </title>
+  <title> Android模块化编程之引用本地的aar | Garryz </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -106,7 +110,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -194,103 +198,171 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 11 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/03/markdown文件头/" itemprop="url">
-              
-                <span itemprop="name">hexo - markdown文件头</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-03T23:22:22+08:00"
-              content="2016-04-03" >
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/02/Mac编译android源码/" itemprop="url">
-              
-                <span itemprop="name">Mac编译android源码</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-02T18:45:11+08:00"
-              content="2016-04-02" >
-          04-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android模块化编程之引用本地的aar
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-05T01:11:42+08:00" content="2015-12-05">
+              2015-12-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/05/Android模块化编程之引用本地的aar/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/05/Android模块化编程之引用本地的aar/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/12/05/Android模块化编程之引用本地的aar/" class="leancloud_visitors" data-flag-title="Android模块化编程之引用本地的aar">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>随着项目越来越多，代码的复用就变得异常重要，这时候就要进行模块化编程，就是把一些通用的组件或者类库做成单独的模块，其他项目直接进行引用就好。针对Android开发最常见的就是Android Library，在Gradle出现之前引用Android Library的方式也很繁琐，但是有了Gradle一切变得非常简单方便。</p>
+<h3 id="aar是什么">aar是什么</h3><p>大家都知道jar文件把，如果你有一个Android Library项目，可以很容易的导出jar文件，然后在其他项目中很方便的引用，aar和jar类似，区别就是一个Android Library项目导出的jar文件不能包含资源文件，比如一些drawable文件、xml资源文件之类的，所以这就有很大的限制，在gradle之前我们要引用带资源文件的Android Library必须要把整个library导入进来进行引用，但是有了gradle之后，Android Library项目可以直接导出成aar，然后其他项目像引用jar的方式直接方便的引用。</p>
+<h3 id="导出aar">导出aar</h3><p>首先Android Library项目的gradle脚本只需要在开头声明</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'com.android.library'</span></span><br></pre></td></tr></table></figure>
+<p>之后就和导出apk文件一样的方法，执行 ./gradlew assembleRelease，然后就可以在 build/outputs/aar 文件夹里生成aar文件</p>
+<h3 id="引用aar">引用aar</h3><p>生成aar之后下一步就是如何引用本地的aar文件？本地的aar文件并没有像引用jar文件这么简单，官方也没有提供解决方案。好在国外的一些前辈总结出了方法，下面就以test.aar文件为例来详述下方法</p>
+<ol>
+<li><p>把aar文件放在一个文件目录内，比如就放在libs目录内</p>
+</li>
+<li><p>在app的build.gradle文件添加如下内容</p>
+</li>
+</ol>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    <span class="keyword">flatDir</span> &#123;</span><br><span class="line">        dirs <span class="string">'libs'</span> <span class="comment">//this way we can find the .aar file in libs folder</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>之后在其他项目中添加一句gradle依赖便方便的引用了该library</li>
+</ol>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">compile</span>(name:<span class="string">'test'</span>, ext:<span class="string">'aar'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="总结">总结</h3><p>当然通过gradle最普遍的方法是把aar上传到mavenCentral或者jcenter，引用的话更方便，但是对于一些公司内部library不想公开，而传统的引用library方式又太繁琐，引用本地的aar文件这种方式会非常方便合适，之后通用的模块只需要做成library，不管更新还是修改只需要打包成aar，然后供其他项目使用就好了，对Android开发来说这是提升代码复用非常有效的一个手段。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/aar/" rel="tag">#aar</a>
+          
+            <a href="/tags/gradle/" rel="tag">#gradle</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/05/AndroidStudio中多重依赖/" rel="next" title="AndroidStudio中多重依赖">
+                <i class="fa fa-chevron-left"></i> AndroidStudio中多重依赖
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/09/Mac安装Ant/" rel="prev" title="Mac安装Ant">
+                Mac安装Ant <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -298,6 +370,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/05/Android模块化编程之引用本地的aar/"
+           data-title="Android模块化编程之引用本地的aar" data-url="http://www.garryz.cn/2015/12/05/Android模块化编程之引用本地的aar/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -317,8 +397,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-garryz.qbox.me/garryz_loco.png"
@@ -412,6 +501,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#aar是什么"><span class="nav-number">1.</span> <span class="nav-text">aar是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出aar"><span class="nav-number">2.</span> <span class="nav-text">导出aar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用aar"><span class="nav-number">3.</span> <span class="nav-text">引用aar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -502,11 +602,10 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=5.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.0"></script>
+
 
 
   

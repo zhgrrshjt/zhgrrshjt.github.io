@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=5.0.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Garryz, garryz" />
+  <meta name="keywords" content="buildconfig,debug," />
 
 
 
@@ -59,15 +59,43 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Garryz">
-<meta property="og:url" content="http://www.garryz.cn/archives/2016/04/index.html">
+<meta name="description" content="关于Android Studio 使用依赖库中的BuildConfig.Debug一直为false情况
+解决方法
+
+被依赖库的 build.gradle
+
+12345android &amp;#123;	...	publishNonDefault true		...&amp;#125;
+
+Application build.gradle
+
+123456dependencies &amp;#123;	...    debu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于AndroidStudio依赖库BuildConfig.Debug">
+<meta property="og:url" content="http://www.garryz.cn/2015/12/24/关于AndroidStudio依赖库BuildConfig-Debug/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="关于Android Studio 使用依赖库中的BuildConfig.Debug一直为false情况
+解决方法
+
+被依赖库的 build.gradle
+
+12345android &amp;#123;	...	publishNonDefault true		...&amp;#125;
+
+Application build.gradle
+
+123456dependencies &amp;#123;	...    debu">
+<meta property="og:updated_time" content="2016-04-03T15:23:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Garryz">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="关于AndroidStudio依赖库BuildConfig.Debug">
+<meta name="twitter:description" content="关于Android Studio 使用依赖库中的BuildConfig.Debug一直为false情况
+解决方法
+
+被依赖库的 build.gradle
+
+12345android &amp;#123;	...	publishNonDefault true		...&amp;#125;
+
+Application build.gradle
+
+123456dependencies &amp;#123;	...    debu">
 
 
 
@@ -85,7 +113,7 @@
   };
 </script>
 
-  <title> 归档 | Garryz </title>
+  <title> 关于AndroidStudio依赖库BuildConfig.Debug | Garryz </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -106,7 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -194,103 +222,162 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 11 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/03/markdown文件头/" itemprop="url">
-              
-                <span itemprop="name">hexo - markdown文件头</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-03T23:22:22+08:00"
-              content="2016-04-03" >
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/02/Mac编译android源码/" itemprop="url">
-              
-                <span itemprop="name">Mac编译android源码</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-02T18:45:11+08:00"
-              content="2016-04-02" >
-          04-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于AndroidStudio依赖库BuildConfig.Debug
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-24T18:45:31+08:00" content="2015-12-24">
+              2015-12-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/android/" itemprop="url" rel="index">
+                    <span itemprop="name">android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/24/关于AndroidStudio依赖库BuildConfig-Debug/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/24/关于AndroidStudio依赖库BuildConfig-Debug/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2015/12/24/关于AndroidStudio依赖库BuildConfig-Debug/" class="leancloud_visitors" data-flag-title="关于AndroidStudio依赖库BuildConfig.Debug">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于Android Studio 使用依赖库中的BuildConfig.Debug一直为false情况</p>
+<p><a href="https://code.google.com/p/android/issues/detail?id=66805" target="_blank" rel="external">解决方法</a></p>
+<ul>
+<li>被依赖库的 build.gradle</li>
+</ul>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	<span class="attribute">...</span></span><br><span class="line">	publishNonDefault <span class="literal">true</span>	</span><br><span class="line">	<span class="attribute">...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Application build.gradle</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">dependencies</span> &#123;</span><br><span class="line">	...</span><br><span class="line">    <span class="tag">debugCompile</span> <span class="tag">project</span>(<span class="attribute">path</span>: <span class="string">':library'</span>, <span class="attribute">configuration</span>: <span class="string">'debug'</span>)</span><br><span class="line">    <span class="tag">releaseCompile</span> <span class="tag">project</span>(<span class="attribute">path</span>: <span class="string">':library'</span>, <span class="attribute">configuration</span>: <span class="string">'release'</span>)</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/buildconfig/" rel="tag">#buildconfig</a>
+          
+            <a href="/tags/debug/" rel="tag">#debug</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/10/查看APK方法数/" rel="next" title="查看APK方法数">
+                <i class="fa fa-chevron-left"></i> 查看APK方法数
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/02/Mac编译android源码/" rel="prev" title="Mac编译android源码">
+                Mac编译android源码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -298,6 +385,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/24/关于AndroidStudio依赖库BuildConfig-Debug/"
+           data-title="关于AndroidStudio依赖库BuildConfig.Debug" data-url="http://www.garryz.cn/2015/12/24/关于AndroidStudio依赖库BuildConfig-Debug/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -317,8 +412,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-garryz.qbox.me/garryz_loco.png"
@@ -412,6 +516,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -502,11 +617,10 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=5.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.0"></script>
+
 
 
   
