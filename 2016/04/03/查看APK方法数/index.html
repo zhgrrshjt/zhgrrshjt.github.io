@@ -59,16 +59,34 @@
 
 
 
-<meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://www.garryz.cn/categories/index.html">
+<meta name="description" content="title: 查看APK方法数date: 2015-12-10 00:10:56tags: [dex, gradle]
+categories: “android”使用 dex-method-counts 查看
+下载 dex-method-counts :  下载地址
+解压到 /Users/username/software/dex-method-counts 下
+
+使用Ant:
+$ ant jar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Garryz">
+<meta property="og:url" content="http://www.garryz.cn/2016/04/03/查看APK方法数/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
-<meta property="og:updated_time" content="2015-12-02T13:19:36.000Z">
+<meta property="og:description" content="title: 查看APK方法数date: 2015-12-10 00:10:56tags: [dex, gradle]
+categories: “android”使用 dex-method-counts 查看
+下载 dex-method-counts :  下载地址
+解压到 /Users/username/software/dex-method-counts 下
+
+使用Ant:
+$ ant jar">
+<meta property="og:updated_time" content="2016-04-03T15:13:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="Garryz">
+<meta name="twitter:description" content="title: 查看APK方法数date: 2015-12-10 00:10:56tags: [dex, gradle]
+categories: “android”使用 dex-method-counts 查看
+下载 dex-method-counts :  下载地址
+解压到 /Users/username/software/dex-method-counts 下
+
+使用Ant:
+$ ant jar">
 
 
 
@@ -86,13 +104,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    分类 | Garryz
-  
-</title>
+  <title>  | Garryz </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -113,7 +125,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -203,16 +215,152 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 3 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-03T23:13:25+08:00" content="2016-04-03">
+              2016-04-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/03/查看APK方法数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/03/查看APK方法数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/03/查看APK方法数/" class="leancloud_visitors" data-flag-title="">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"></ul>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>title: 查看APK方法数<br>date: 2015-12-10 00:10:56<br>tags: [dex, gradle]</p>
+<h2 id="categories:_“android”">categories: “android”</h2><h2 id="使用_dex-method-counts_查看">使用 dex-method-counts 查看</h2><ul>
+<li>下载 dex-method-counts :  <a href="https://github.com/mihaip/dex-method-counts" target="_blank" rel="external">下载地址</a></li>
+<li>解压到 /Users/username/software/dex-method-counts 下</li>
+</ul>
+<p>使用Ant:</p>
+<pre><code>$ ant jar
+$ ./dex-<span class="keyword">method</span>-counts path/to/<span class="type">App</span>.apk <span class="comment"># or .zip or .dex or directory</span>
+</code></pre><p>使用Gradle:</p>
+<pre><code>$ ./gradlew assemble
+$ ./dex-<span class="keyword">method</span>-counts path/to/<span class="type">App</span>.apk <span class="comment"># or .zip or .dex or directory</span>
+</code></pre><p>将看到的内容:</p>
+<pre><code><span class="keyword">Read</span> <span class="keyword">in</span> <span class="number">65490</span> <span class="function"><span class="keyword">method</span> <span class="title">IDs</span>.
+&lt;<span class="title">root</span>&gt;:</span> <span class="number">65490</span>
+: <span class="number">3</span>
+android: <span class="number">6837</span>
+    accessibilityservice: <span class="number">6</span>
+    bluetooth: <span class="number">2</span>
+    content: <span class="number">248</span>
+        pm: <span class="number">22</span>
+        res: <span class="number">45</span>
+    ...
+com: <span class="number">53881</span>
+    adjust: <span class="number">283</span>
+        sdk: <span class="number">283</span>
+    codebutler: <span class="number">65</span>
+        android_websockets: <span class="number">65</span>
+    ...
+Overall <span class="function"><span class="keyword">method</span> <span class="title">count</span>:</span> <span class="number">65490</span>
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/03/Mac安装Ant/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/03/Mac编译android源码/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -221,6 +369,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/03/查看APK方法数/"
+           data-title="" data-url="http://www.garryz.cn/2016/04/03/查看APK方法数/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -240,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://dn-garryz.qbox.me/garryz_loco.png"
@@ -335,6 +500,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#categories:_“android”"><span class="nav-number">1.</span> <span class="nav-text">categories: “android”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用_dex-method-counts_查看"><span class="nav-number">2.</span> <span class="nav-text">使用 dex-method-counts 查看</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -425,6 +601,11 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.0"></script>
+<script type="text/javascript" src="/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=5.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.0"></script>
+
+
 
   
 
