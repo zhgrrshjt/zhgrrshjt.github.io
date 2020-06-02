@@ -59,28 +59,28 @@
 
 
 
-<meta name="description" content="代码下载
+<meta name="description" content="下载及编译官网地址
 安装repo创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)
 12$ mkdir ~/bin$ PATH=~/bin:$PATH
 下载repo工具并设置为可执行
-12$ curl https://storage.googleapis.com/g">
+12$ curl https://storage.googleapis.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac编译android源码">
 <meta property="og:url" content="http://www.garryz.cn/2016/04/02/Mac编译android源码/index.html">
 <meta property="og:site_name" content="Garryz">
-<meta property="og:description" content="代码下载
+<meta property="og:description" content="下载及编译官网地址
 安装repo创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)
 12$ mkdir ~/bin$ PATH=~/bin:$PATH
 下载repo工具并设置为可执行
-12$ curl https://storage.googleapis.com/g">
-<meta property="og:updated_time" content="2016-04-03T15:21:55.000Z">
+12$ curl https://storage.googleapis.">
+<meta property="og:updated_time" content="2016-04-07T14:37:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac编译android源码">
-<meta name="twitter:description" content="代码下载
+<meta name="twitter:description" content="下载及编译官网地址
 安装repo创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)
 12$ mkdir ~/bin$ PATH=~/bin:$PATH
 下载repo工具并设置为可执行
-12$ curl https://storage.googleapis.com/g">
+12$ curl https://storage.googleapis.">
 
 
 
@@ -302,7 +302,7 @@
       
 
       
-        <p>代码下载</p>
+        <p>下载及编译<a href="https://source.android.com/source/requirements.html" target="_blank" rel="external">官网地址</a></p>
 <h3 id="安装repo">安装repo</h3><p>创建bin目录,并将bin目录配置到环境变量下(该方法配置环境变量可能会出现重启后无效,可以通过手动修改/Users/currentUser/bash_profile文件来添加bin的环境变量)</p>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/bin</span><br><span class="line">$ PATH=~/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 <p>下载repo工具并设置为可执行</p>
@@ -323,12 +323,11 @@
 <p>第一步为创建分区,第二步为修改该分区为可读写模式</p>
 </blockquote>
 <p>进入分区,设置编译环境</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">source</span> build/envsetup.<span class="keyword">sh</span> 或者 $ . build/envsetup.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">source</span> build/envsetup.<span class="keyword">sh</span> 或者 $ .build/envsetup.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
 <p>选择一个编译目标,通过lunch可以查看有哪些编译目标</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lunch  或者   <span class="variable">$ </span>lunch aosp_arm_eng</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lunch 或者 <span class="variable">$ </span>lunch aosp_arm_eng</span><br></pre></td></tr></table></figure>
 <p>编译</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>make -j4</span><br></pre></td></tr></table></figure>
-
       
     </div>
 
@@ -537,7 +536,7 @@
         <div class="copyright" >
   
   &copy;  2015 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
